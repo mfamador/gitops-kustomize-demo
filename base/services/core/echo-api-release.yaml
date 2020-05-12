@@ -11,7 +11,7 @@ spec:
   chart:
     git: git@github.com:mfamador/gitops-kustomize-demo
     path: charts/api
-    ref: example_api # TODO change to master
+    ref: master
   values:
     image:
       repository: gcr.io/kubernetes-e2e-test-images/echoserver

@@ -28,7 +28,7 @@ helm repo add fluxcd https://charts.fluxcd.io
 ### Install the HelmRelease CRD
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/master/deploy/flux-helm-release-crd.yaml
+kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/1.0.1/deploy/crds.yaml
 ```
 
 ### Install Flux on Staging cluster
@@ -37,7 +37,7 @@ kubectl create ns flux
 
 helm install flux \
 --set rbac.create=true \
---set git.url=git@github.com:mfamador/gitops-kustomize-demodemo.git \
+--set git.url=git@github.com:mfamador/gitops-kustomize-demo.git \
 --set git.branch=master \
 --set git.path="staging" \
 --set git.pollInterval=120s \
@@ -57,6 +57,7 @@ fluxctl identity --k8s-fwd-ns flux
 helm install helm-operator \
 --set git.ssh.secretName=flux-git-deploy \
 --set workers=2 \
+--set helm.versions=v3 \
 --namespace flux fluxcd/helm-operator 
 ```
 
