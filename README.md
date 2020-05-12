@@ -39,7 +39,7 @@ helm install flux \
 --set rbac.create=true \
 --set git.url=git@github.com:mfamador/gitops-kustomize-demodemo.git \
 --set git.branch=master \
---set git.path="development" \
+--set git.path="staging-cluster" \
 --set git.pollInterval=120s \
 --set manifestGeneration=true \
 --set syncGarbageCollection.enabled=true \
