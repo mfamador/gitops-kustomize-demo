@@ -2,6 +2,8 @@
 
 ## Create a k3d cluster with 4 workers
 ```
+brew install k3d
+
 k3d create --publish 8080:80 --workers 4
 
 export KUBECONFIG="$(k3d get-kubeconfig --name='k3s-default')"
