@@ -31,7 +31,7 @@ helm repo add fluxcd https://charts.fluxcd.io
 kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/master/deploy/flux-helm-release-crd.yaml
 ```
 
-### Install Flux on development cluster
+### Install Flux on Staging cluster
 ```
 kubectl create ns flux
 
