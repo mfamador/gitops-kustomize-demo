@@ -6,7 +6,6 @@ metadata:
   annotations:
     flux.weave.works/automated: "false"
 spec:
-  releaseName: prometheus-operator
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: prometheus-operator
