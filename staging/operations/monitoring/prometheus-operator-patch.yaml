@@ -1,7 +1,7 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: prometheus-adapter
+  name: prometheus-operator
 spec:
   chart:
     version: 8.13.7
