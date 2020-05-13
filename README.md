@@ -1,9 +1,16 @@
 # Gitops workflow demo with Kustomize
 
-## Create a k3d cluster with 4 workers
+## Install k3d (or other local k8s cluster like kind, minikube, ...)
+
+MacOS
 ```
 brew install k3d
+```
 
+[Other OS](https://github.com/rancher/k3d)
+
+### Create a k3d cluster with 4 workers
+```
 k3d create --publish 8080:80 --workers 4
 
 export KUBECONFIG="$(k3d get-kubeconfig --name='k3s-default')"
@@ -17,7 +24,6 @@ brew install helm
 ```
 
 [Other OS](https://helm.sh/docs/intro/install/)
-
 
 ## Install Flux
 
