@@ -4,4 +4,4 @@ metadata:
   name: grafana-loki
 spec:
   chart:
-    ref: master
+    version: 0.36.2
