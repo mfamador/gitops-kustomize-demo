@@ -8,4 +8,4 @@ spec:
   values:
     connectors:
     - alertmanager: https://outlook.office.com/webhook/c4d66e0a-17eb-41d0-8a87-22d45fb9c5d5%40c4fa6c62-e666-4286-8e64-792849b94dfc/IncomingWebhook/0e41de4c6ae64f96b6558c439ac98449/374eb6e7-f170-4678-acc5-99f882ff5818
-    replicaCount: 2
+    replicaCount: 1
