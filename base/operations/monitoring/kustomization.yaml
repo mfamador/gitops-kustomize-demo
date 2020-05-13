@@ -3,10 +3,7 @@ kind: Kustomization
 namespace: monitoring
 resources:
 - flux-rules.yaml
-- grafana-loki.yaml
-- gremlin.yaml
 - namespace.yaml
 - prometheus-adapter.yaml
 - prometheus-msteams.yaml
 - prometheus-operator.yaml
-- thanos.yaml

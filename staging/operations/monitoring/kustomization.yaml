@@ -4,6 +4,3 @@ patchesStrategicMerge:
 - prometheus-operator-patch.yaml
 - prometheus-adapter-patch.yaml
 - prometheus-msteams-patch.yaml
-- thanos-patch.yaml
-- grafana-loki-patch.yaml
-- gremlin-patch.yaml
