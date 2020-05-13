@@ -3,4 +3,5 @@ resources:
 patchesStrategicMerge:
 - prometheus-operator-patch.yaml
 - prometheus-adapter-patch.yaml
+- prometheus-msteams-patch.yaml
 - grafana-loki-patch.yaml

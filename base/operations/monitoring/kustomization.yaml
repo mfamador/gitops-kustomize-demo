@@ -5,4 +5,5 @@ resources:
 - namespace.yaml
 - prometheus-operator.yaml
 - prometheus-adapter.yaml
+- prometheus-msteams.yaml
 - grafana-loki.yaml
