@@ -7,3 +7,5 @@ resources:
 - prometheus-adapter.yaml
 - prometheus-msteams.yaml
 - grafana-loki.yaml
+- flagger-dashboards
+- flux-rules.yaml

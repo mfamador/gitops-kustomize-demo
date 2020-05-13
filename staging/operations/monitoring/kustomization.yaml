@@ -1,5 +1,6 @@
 resources:
-- ../../../base/operations/monitoring
+- ../../../base/operations
+- manifests
 patchesStrategicMerge:
 - prometheus-operator-patch.yaml
 - prometheus-adapter-patch.yaml
