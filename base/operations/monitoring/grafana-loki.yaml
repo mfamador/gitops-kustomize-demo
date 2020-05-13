@@ -2,6 +2,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: prometheus-operator
+  namespace: monitoring
 spec:
   chart:
     repository: https://grafana.github.io/loki/charts

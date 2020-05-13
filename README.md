@@ -46,7 +46,7 @@ kubectl create ns flux
 helm install flux \
 --set rbac.create=true \
 --set git.url=git@github.com:mfamador/gitops-kustomize-demo.git \
---set git.branch=master \
+--set git.branch=test_namespaces \
 --set git.path="staging" \
 --set git.pollInterval=120s \
 --set manifestGeneration=true \
