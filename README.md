@@ -9,9 +9,9 @@ brew install k3d
 
 [Other OS](https://github.com/rancher/k3d)
 
-### Create a k3d cluster with 4 workers
+### Create a k3d cluster with 3 workers
 ```
-k3d create --publish 8080:80 --workers 4
+k3d create --publish 8080:80 --workers 3
 
 export KUBECONFIG="$(k3d get-kubeconfig --name='k3s-default')"
 ```
