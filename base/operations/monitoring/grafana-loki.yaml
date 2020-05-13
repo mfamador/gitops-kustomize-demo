@@ -3,9 +3,13 @@ kind: HelmRelease
 metadata:
   name: grafana-loki
 spec:
+  #chart:
+  #  repository: https://grafana.github.io/loki/charts
+  #  name: "loki/loki-stack"
   chart:
-    repository: https://grafana.github.io/loki/charts
-    name: "loki/loki-stack"
+    git: https://github.com/grafana/loki
+    path: production/helm/loki-stack
+    ref: master
   values:
     loki:
       enabled: true
