@@ -7,4 +7,4 @@ spec:
     version: 8.13.7
   values:
     grafana:
-      enabled: false
+      enabled: true

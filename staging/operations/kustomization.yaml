@@ -1,0 +1,4 @@
+resources:
+- flux
+- istio-system
+- monitoring

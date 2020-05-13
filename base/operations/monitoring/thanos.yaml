@@ -1,0 +1,39 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: thanos
+spec:
+  releaseName: thanos
+  chart:
+    repository: https://kubernetes-charts.banzaicloud.com
+    name: thanos
+    version: 0.3.20
+  values:
+    image:
+      repository: quay.io/thanos/thanos
+      tag: v0.12.2
+      pullPolicy: IfNotPresent
+    store:
+      enabled: false
+    query:
+      enabled: true
+      replicaLabel: "prometheus_replica"
+      replicaCount: 1
+      stores:
+      - "dnssrv+_grpc._tcp.prometheus-operated.monitoring.svc.cluster.local"
+      metrics:
+        serviceMonitor:
+          enabled: true
+          labels:
+            tier: cluster
+    compact:
+      enabled: false
+    bucket:
+      enabled: false
+    rule:
+      enabled: false
+    sidecar:
+      enabled: false
+    objstoreSecretOverride: ""
+    objstoreFile: ""
+    objstore: {}

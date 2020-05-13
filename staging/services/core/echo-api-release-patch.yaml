@@ -6,5 +6,3 @@ metadata:
 spec:
   values:
     replicaCount: 2
-    image:
-      tag: 2.2

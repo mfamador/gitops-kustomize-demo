@@ -1,0 +1,10 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: gremlin
+spec:
+  releaseName: gremlin
+  chart:
+    repository: https://helm.gremlin.com
+    name: gremlin
+    version: 0.1.8
