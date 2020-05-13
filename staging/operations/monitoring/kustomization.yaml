@@ -2,3 +2,5 @@ resources:
 - ../../../base/operations/monitoring
 patchesStrategicMerge:
 - prometheus-operator-patch.yaml
+- prometheus-adapter-patch.yaml
+- grafana-loki-patch.yaml
