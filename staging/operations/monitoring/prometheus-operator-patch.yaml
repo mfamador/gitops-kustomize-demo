@@ -1,8 +1,10 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: prometheus-operator
+  name: prometheus-adapter
 spec:
   chart:
     version: 8.13.7
-
+  values:
+    grafana:
+      enabled: false
