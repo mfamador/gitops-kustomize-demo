@@ -8,6 +8,7 @@ spec:
     name: prometheus-adapter
     version: 2.3.1
   values:
+    releaseName: prometheus-adapter
     rules:
       default: false
     prometheus:
