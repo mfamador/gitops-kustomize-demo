@@ -16,21 +16,11 @@ k3d create --publish 8080:80 --workers 3
 export KUBECONFIG="$(k3d get-kubeconfig --name='k3s-default')"
 ```
 
-## Install Helm 2
+## Install Helm 3
 
 MacOS
 ```
-brew install helm@2
-```
-
-```
-kubectl -n kube-system create serviceaccount tiller
-
-kubectl create clusterrolebinding tiller \
-  --clusterrole=cluster-admin \
-  --serviceaccount=kube-system:tiller
-
-helm init --service-account tiller
+brew install helm@3
 ```
 
 [Other OS](https://helm.sh/docs/intro/install/)
@@ -72,9 +62,10 @@ fluxctl identity --k8s-fwd-ns flux
 
 ### Install Flux Helm Operator
 ```
-helm install helm-operator \
+helm upgrade -i helm-operator \
 --set git.ssh.secretName=flux-git-deploy \
 --set workers=2 \
+--set helm.versions=v3 \
 --namespace flux fluxcd/helm-operator 
 ```
 
