@@ -3,6 +3,7 @@ kind: HelmRelease
 metadata:
   name: grafana-loki
 spec:
+  releaseName: grafana-loki
   chart:
     repository: https://grafana.github.io/loki/charts
     name: "loki/loki-stack"
