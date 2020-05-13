@@ -11,4 +11,4 @@ spec:
     rules:
       default: false
     prometheus:
-      url: http://prometheus-operated.monitoring.svc.cluster.local
+      url: http://monitoring-prometheus-oper-prometheus.monitoring.svc.cluster.local
