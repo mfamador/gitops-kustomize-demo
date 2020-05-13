@@ -2,7 +2,6 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: prometheus-adapter
-  namespace: monitoring
 spec:
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/

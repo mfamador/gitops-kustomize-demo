@@ -2,7 +2,6 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: grafana-loki
-  namespace: monitoring
 spec:
   chart:
     repository: https://grafana.github.io/loki/charts

@@ -2,7 +2,6 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: prometheus-operator
-  namespace: monitoring
 spec:
   chart:
     version: 8.13.7
