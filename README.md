@@ -67,11 +67,7 @@ helm upgrade -i helm-operator \
 --set workers=2 \
 --set helm.versions=v3 \
 --namespace flux fluxcd/helm-operator 
-```
-
-```
-helm@2 init
-```
+````
 
 When we stop using helm charts
 ```
