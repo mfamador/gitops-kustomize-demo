@@ -12,6 +12,6 @@ spec:
   values:
     image:
       repository: gcr.io/kubernetes-e2e-test-images/echoserver
-      tag: 2.2
+      tag: 2.1
       pullPolicy: IfNotPresent
     replicaCount: 3
