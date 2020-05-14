@@ -20,10 +20,6 @@ Expand the name of the chart.
 {{- end -}}
 {{- end -}}
 
-{{- define "api.serviceName" -}}
-{{- printf "%s" .Chart.Name -}}
-{{- end -}}
-
 {{/*
 Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).

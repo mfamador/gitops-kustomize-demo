@@ -1,6 +1,5 @@
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "api.fullname" . -}}
-{{- $serviceName := include "api.serviceName" . -}}
 {{- $name := include "api.name" . -}}
 {{- $host := include "api.host" . -}}
 {{- $sec := split "." $host -}}
@@ -41,7 +40,7 @@ spec:
         {{- range .paths }}
           - path: {{ . }}
             backend:
-              serviceName: {{ $serviceName }}
+              serviceName: {{ $name }}
               servicePort: {{ $.Values.servicePort }}
         {{- end }}
   {{- end }}
