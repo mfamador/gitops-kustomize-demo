@@ -69,21 +69,6 @@ helm upgrade -i helm-operator \
 --namespace flux fluxcd/helm-operator 
 ````
 
-When we stop using helm charts
-```
---set helm.versions=v3 
-```
-
-
-
-Configure ServiceMonitor for Flux and Helm Operator
-
-```
-helm upgrade --reuse-values flux -n flux --set prometheus.enabled=true,prometheus.serviceMonitor.create=true,"prometheus.serviceMonitor.additionalLabels.release=prometheus-operator" fluxcd/flux
-
-helm upgrade --reuse-values helm-operator -n flux --set prometheus.enabled=true,prometheus.serviceMonitor.create=true,"prometheus.serviceMonitor.additionalLabels.release=prometheus-operator" fluxcd/helm-operator 
-```
-
 ### Test
 
 ```
