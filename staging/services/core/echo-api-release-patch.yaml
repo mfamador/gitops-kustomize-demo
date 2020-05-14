@@ -4,5 +4,7 @@ metadata:
   name: echo-api
   namespace: core
 spec:
+  chart:
+    ref: master
   values:
     replicaCount: 2

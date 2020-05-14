@@ -3,7 +3,13 @@
 Expand the name of the chart.
 */}}
 {{- define "api.name" -}}
-{{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
+{{- if .Values.nameOverride -}}
+{{- .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
+{{- else if eq .Release.Name "RELEASE-NAME" -}}
+{{- .Chart.Name | trunc 63 | trimSuffix "-" -}}
+{{- else -}}
+{{- .Release.Name | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
 {{- end -}}
 
 {{- define "api.host" -}}
