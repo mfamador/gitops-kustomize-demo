@@ -8,6 +8,7 @@ metadata:
     flux.weave.works/tag.chart-image: glob:*
 spec:
   helmVersion: v3
+  releaseName: echo-api
   chart:
     git: git@github.com:mfamador/gitops-kustomize-demo
     path: charts/api
