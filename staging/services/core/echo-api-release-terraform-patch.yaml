@@ -1,9 +1,0 @@
-# managed by terraform
-apiVersion: helm.fluxcd.io/v1
-kind: HelmRelease
-metadata:
-  name: echo-api
-  namespace: core
-spec:
-  image:
-    tag: 2.2

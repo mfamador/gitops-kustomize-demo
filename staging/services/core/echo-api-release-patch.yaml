@@ -3,8 +3,15 @@ kind: HelmRelease
 metadata:
   name: echo-api
   namespace: core
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~2
 spec:
   chart:
     ref: master
   values:
+    image:
+      repository: gcr.io/kubernetes-e2e-test-images/echoserver
+      tag: 2.2
+      pullPolicy: IfNotPresent
     replicaCount: 2
