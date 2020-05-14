@@ -3,9 +3,6 @@ kind: HelmRelease
 metadata:
   name: echo-api
   namespace: core
-  annotations:
-    flux.weave.works/automated: "true"
-    flux.weave.works/tag.chart-image: semver:~2
 spec:
   helmVersion: v3
   releaseName: echo-api

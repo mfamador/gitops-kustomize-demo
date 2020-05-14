@@ -14,4 +14,4 @@ spec:
       repository: gcr.io/kubernetes-e2e-test-images/echoserver
       tag: 2.2
       pullPolicy: IfNotPresent
-    replicaCount: 2
+    replicaCount: 3
