@@ -1,10 +1,9 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: prometheus-operator
+  name: prometheus-msteams
 spec:
   chart:
-    version: 8.13.7
+    version: 0.4.7
   values:
-    grafana:
-      enabled: true
+    replicaCount: 1

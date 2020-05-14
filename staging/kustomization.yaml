@@ -1,3 +1,4 @@
 resources:
+- operations/flux
 - operations/monitoring
 - services/core

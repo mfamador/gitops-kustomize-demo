@@ -1,0 +1,22 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: prometheus-msteams
+spec:
+  releaseName: prometheus-msteams
+  chart:
+    repository: https://prometheus-msteams.github.io/helm-chart/
+    name: prometheus-msteams
+    version: 0.4.7
+  values:
+    image:
+      repository: quay.io/prometheusmsteams/prometheus-msteams
+      tag: v1.3.3
+    metrics:
+      serviceMonitor:
+        additionalLabels:
+          app: prometheus-msteams
+          release: prometheus-msteams
+        enabled: true
+        scrapeInterval: 30s
+    replicaCount: 1

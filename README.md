@@ -9,9 +9,9 @@ brew install k3d
 
 [Other OS](https://github.com/rancher/k3d)
 
-### Create a k3d cluster with 4 workers
+### Create a k3d cluster with 3 workers
 ```
-k3d create --publish 8080:80 --workers 4
+k3d create --publish 8080:80 --workers 3
 
 export KUBECONFIG="$(k3d get-kubeconfig --name='k3s-default')"
 ```
@@ -20,7 +20,7 @@ export KUBECONFIG="$(k3d get-kubeconfig --name='k3s-default')"
 
 MacOS
 ```
-brew install helm
+brew install helm@3
 ```
 
 [Other OS](https://helm.sh/docs/intro/install/)
@@ -46,7 +46,7 @@ kubectl create ns flux
 helm install flux \
 --set rbac.create=true \
 --set git.url=git@github.com:mfamador/gitops-kustomize-demo.git \
---set git.branch=master \
+--set git.branch=test_namespaces \
 --set git.path="staging" \
 --set git.pollInterval=120s \
 --set manifestGeneration=true \
@@ -62,12 +62,22 @@ fluxctl identity --k8s-fwd-ns flux
 
 ### Install Flux Helm Operator
 ```
-helm install helm-operator \
+helm upgrade -i helm-operator \
 --set git.ssh.secretName=flux-git-deploy \
 --set workers=2 \
 --set helm.versions=v3 \
 --namespace flux fluxcd/helm-operator 
 ```
+
+```
+helm@2 init
+```
+
+When we stop using helm charts
+```
+--set helm.versions=v3 
+```
+
 
 
 Configure ServiceMonitor for Flux and Helm Operator

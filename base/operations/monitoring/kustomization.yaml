@@ -1,5 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: monitoring
 resources:
-- namespace.yaml
+- manifests/flux-rules.yaml
+- manifests/namespace.yaml
+- prometheus-adapter.yaml
+- prometheus-msteams.yaml
 - prometheus-operator.yaml
