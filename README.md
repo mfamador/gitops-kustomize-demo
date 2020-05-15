@@ -98,9 +98,13 @@ open http://localhost:8888
 ```
 
 Explore Loki:
+
+![Loki](assets/loki.png "Loki")
+
 ```
 open http://localhost:8888/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22Loki%22,%7B%22expr%22:%22%7Bapp%3D%5C%22echo-api%5C%22%7D%22%7D,%7B%22mode%22:%22Logs%22%7D,%7B%22ui%22:%5Btrue,true,true,%22none%22%5D%7D%5D
 ```
+
 
 ## Find out outdated helm charts
 
