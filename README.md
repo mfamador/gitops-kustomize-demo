@@ -73,8 +73,17 @@ helm upgrade -i helm-operator \
 --namespace flux fluxcd/helm-operator 
 ````
 
-### Test
+## Test
 
 ```
 curl -H "host:echo.domain.com" http://localhost:8080/
+```
+
+## Find out outdated charts
+
+```
+helm plugin install https://github.com/fabmation-gmbh/helm-whatup
+
+helm repo update
+helm whatup --all-namespaces --ignore-repo # you'll need `--ignore-repo` because the plugin is not handling custom charts correctly
 ```
