@@ -79,7 +79,7 @@ helm upgrade -i helm-operator \
 curl -H "host:echo.domain.com" http://localhost:8080/
 ```
 
-## Find out outdated charts
+## Find out outdated helm charts
 
 ```
 helm plugin install https://github.com/fabmation-gmbh/helm-whatup
