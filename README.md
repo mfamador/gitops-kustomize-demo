@@ -1,4 +1,4 @@
-# Gitops workflow demo with Kustomize
+# GitOps workflow demo with Kustomize
 
 ## Install k3d (or other local k8s cluster like kind, minikube, ...)
 
