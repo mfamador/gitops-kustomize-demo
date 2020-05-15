@@ -75,9 +75,24 @@ helm upgrade -i helm-operator \
 
 ## Test
 
+### Echo API
 ```
 curl -H "host:echo.domain.com" http://localhost:8080/
 ```
+
+### Grafana
+
+Check ingress:
+```
+curl -H "host:grafana.domain.com" http://localhost:8080/
+```
+
+Grafana UI:
+```
+kubectl port-forward svc/prometheus-operator-grafana 8080:80 -n monitoring
+open http://localhost:8080
+```
+
 
 ## Find out outdated helm charts
 

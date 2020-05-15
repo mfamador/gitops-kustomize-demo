@@ -14,6 +14,10 @@ spec:
       existingSecret: grafana
       userKey: admin-user
       passwordKey: admin-password
+    ingress:
+      enabled: true
+      hosts:
+      - grafana.domain.com
     additionalDataSources:
     - name: Loki
       type: Loki
