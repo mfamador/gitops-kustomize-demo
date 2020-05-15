@@ -1,7 +1,7 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: prometheus-operator
+  name: loki
 spec:
   chart:
-    version: 8.13.7
+    version: 0.36.2

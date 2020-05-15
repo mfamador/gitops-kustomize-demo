@@ -2,6 +2,7 @@ namespace: monitoring
 resources:
 - manifests/flux-rules.yaml
 - manifests/namespace.yaml
+- loki.yaml
 - prometheus-adapter.yaml
 - prometheus-msteams.yaml
 - prometheus-operator.yaml
