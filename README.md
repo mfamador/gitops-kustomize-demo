@@ -1,4 +1,4 @@
-# GitOps workflow demo with Kustomize
+# Gitops workflow demo with Kustomize
 
 ## Install k3d (or other local k8s cluster like kind, minikube, ...)
 
@@ -87,12 +87,20 @@ Check ingress:
 curl -H "host:grafana.domain.com" http://localhost:8080/
 ```
 
-Grafana UI:
+Setup port-forward to Grafana service to use it locally:
 ```
-kubectl port-forward svc/prometheus-operator-grafana 8080:80 -n monitoring
-open http://localhost:8080
+kubectl port-forward svc/prometheus-operator-grafana 8888:80 -n monitoring
 ```
 
+Grafana UI:
+```
+open http://localhost:8888
+```
+
+Explore Loki:
+```
+open http://localhost:8888/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22Loki%22,%7B%22expr%22:%22%7Bapp%3D%5C%22echo-api%5C%22%7D%22%7D,%7B%22mode%22:%22Logs%22%7D,%7B%22ui%22:%5Btrue,true,true,%22none%22%5D%7D%5D
+```
 
 ## Find out outdated helm charts
 
