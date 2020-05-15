@@ -112,5 +112,6 @@ open http://localhost:8888/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22Lok
 helm plugin install https://github.com/fabmation-gmbh/helm-whatup
 
 helm repo update
+
 helm whatup --all-namespaces --ignore-repo # you'll need `--ignore-repo` because the plugin is not handling custom charts correctly
 ```
