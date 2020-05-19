@@ -10,6 +10,8 @@ spec:
     version: 8.13.8
   grafana:
     enabled: true
+    image:
+      tag: 7.0.0
     admin:
       existingSecret: grafana
       userKey: admin-user

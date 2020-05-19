@@ -8,6 +8,8 @@ spec:
   values:
     grafana:
       enabled: true
+      image:
+        tag: 7.0.0
       ingress:
         enabled: true
         hosts:
