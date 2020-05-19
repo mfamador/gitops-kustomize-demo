@@ -1,9 +1,0 @@
-apiVersion: helm.fluxcd.io/v1
-kind: HelmRelease
-metadata:
-  name: prometheus-msteams
-spec:
-  chart:
-    version: 0.4.7
-  values:
-    replicaCount: 1

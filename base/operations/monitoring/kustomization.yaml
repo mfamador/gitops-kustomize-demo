@@ -4,5 +4,4 @@ resources:
 - manifests/namespace.yaml
 - loki.yaml
 - prometheus-adapter.yaml
-- prometheus-msteams.yaml
 - prometheus-operator.yaml
