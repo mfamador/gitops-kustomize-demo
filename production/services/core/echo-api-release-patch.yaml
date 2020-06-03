@@ -4,7 +4,7 @@ metadata:
   name: echo-api
   namespace: core
   annotations:
-    flux.weave.works/automated: "false"
+    flux.weave.works/automated: "true"
 spec:
   chart:
     ref: master
